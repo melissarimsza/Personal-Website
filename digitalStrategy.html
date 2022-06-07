@@ -10,6 +10,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<style>
+    .flip-container {
+        margin: 10px;
+        width: 400px;
+        height: 400px; 
+        perspective: 1000;
+        display: inline-block;
+    }
+    .flip-container:hover .card {
+        transform: rotateY(180deg);
+    }
+    .flip-container:active .card {
+        transform: rotateY(180deg);
+    }
+    .card, .front, .back {
+        width: 130px;
+        height: 195px;
+    }
+    .card {
+        transition: 0.5s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+    .front, .back {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        position: absolute;
+    }
+    .front {
+        z-index: 1;
+        transform: rotateY(180deg);
+        background: url("images/card-front.jpg") no-repeat;
+    }
+    .back {
+        z-index: 2; /* back side, placed above front */
+        transform: rotateY(0deg);
+        background: url("images/card-back.jpg") no-repeat;
+    }
+</style>
+
 <body>
     <nav class="navContainer">
         <div>
@@ -27,56 +67,100 @@
 
     <main>
 
-    <div class="devContainer">
+    <div class="mainContainer">
 
-        <div class="digIcon">
-            <h1  style="font-size:60px;color:#54AEB0;">Digital</h1>
-            <h1  style="font-size:60px;color:#54AEB0;">Content</h1>
-            <p>Video editing, directing, animation, and digital strategy.</p>
-        </div>
-
-        <div class="digIndividual">
-            <br>
-            <div  style="color:white;background-color:#54AEB0;margin: 0;">
-                <h2 style="border:0;margin:0;padding:0;color: white;">"The Two of Us"</h2>
-                <p style="max-width: 380px;">Created with Adobe Photoshop and Adobe AfterEffects as a final project for an animation class. Inspired by the beauty of the ocean and the feeling of being the only people in the world.</p>
+        <div class="flip-container">
+            <div class="digIcon">
+                <h1  style="font-size:50px;color:#54AEB0;">Digital Content</h1>
+                <p id="titleCaption">Video editing, directing, animation, and digital strategy.</p>
             </div>
-            <br>
-            <iframe src="https://drive.google.com/file/d/1UUEQetVwxWAA3yxv5OlJU2ZYfEHtxnB0/preview" width="320" allow="autoplay"></iframe>
         </div>
-
-        <div class="digIndividual">
-            <br>
-            <div  style="color:white;background-color:#54AEB0;margin: 0;">
-                <h2 style="border:0;margin:0;padding:0;color: white;">Instagram Strategy</h2>
-                <p style="margin:0;max-width: 380px;"> This presentation uses core marketing techniques to create an Instagram marketing plan for the comapny Bath and Body Works.</p>
+        
+        <div class="flip-container">
+            <div class="card">
+                <div class="front">
+                    <div class="digIndividual">
+                        <div>
+                            <h2 id="header" style="background-color:#54AEB0">"The Two of Us"</h2>
+                            <p id="caption">A final project for a 2D animation class. Inspired by the beauty of the ocean and the feeling of being the only people in the world. Created with Adobe Photoshop and Adobe AfterEffects.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="digIndividual">
+                        <iframe src="https://drive.google.com/file/d/1UUEQetVwxWAA3yxv5OlJU2ZYfEHtxnB0/preview" width="320" allow="autoplay"></iframe>
+                    </div>
+                </div>
             </div>
-            <br>
-            <iframe class="embededDig" src="https://docs.google.com/presentation/d/e/2PACX-1vRAsEB3kZ7KmgHS4royHUHinvBLa1D-VAOek9LBhly0kygXuM3ZqhFEpLdnK6g9ChX6aROpjjMVEu2j/embed?start=false&loop=false&delayms=5000" frameborder="0" width="300" height="210" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
         </div>
 
-        <div class="digIcon">
-            <img class="designImages" src="assets/digitalNotif.png" alt="blue icon of social media notifications">
-        </div>
-
-        <div class="digIndividual">
-            <br>
-            <div  style="color:white;background-color:#54AEB0;margin: 0;">
-                <h2 style="border:0;margin:0;padding:0;color: white;">"Weirdo" Music Video</h2>
-                <p style="max-width: 380px;">Written, directed, and edited by Melissa Rimsza. Muisc by Way Too Andrew.</p>
+        <div class="flip-container">
+            <div class="card">
+                <div class="front">
+                    <div class="digIndividual">
+                        <div>
+                            <h2 id="header" style="background-color:#54AEB0">Quantum Computing Teaser Video</h2>
+                            <p id="caption">Video created to build hype for the launch of a new quantum computing technology. Graphics made with Adobe After Effects.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="digIndividual">
+                        <iframe src="https://drive.google.com/file/d/1p-GFtspXfuJExsSXBiuy7Flw6_fq6H9y/preview" width="320" allow="autoplay"></iframe>
+                    </div>
+                </div>
             </div>
-            <br>
-            <iframe width="320" src="https://www.youtube.com/embed/6zIj3n9xTtI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
-        <div class="digIcon">
-            <img class="designImages" src="assets/digitalPeople.png" alt="blue icon of people connected via network">
+        <div class="flip-container">
+            <div class="card">
+                <div class="front">
+                    <div class="digIndividual">
+                        <div>
+                            <h2 id="header" style="background-color:#54AEB0">Instagram Strategy</h2>
+                            <p id="caption"> This presentation uses core marketing techniques to create an Instagram marketing plan for the comapny Bath and Body Works.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="digIndividual">
+                        <iframe class="embededDig" src="https://docs.google.com/presentation/d/e/2PACX-1vRAsEB3kZ7KmgHS4royHUHinvBLa1D-VAOek9LBhly0kygXuM3ZqhFEpLdnK6g9ChX6aROpjjMVEu2j/embed?start=false&loop=false&delayms=5000" frameborder="0" width="300" height="210" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div class="flip-container">
+            <div class="card">
+                <div class="front">
+                    <div class="digIndividual">
+                        <div>
+                            <h2 id="header" style="background-color:#54AEB0">"Weirdo" Music Video</h2>
+                            <p id="caption">Written, directed, and edited by Melissa Rimsza. Muisc by Way Too Andrew.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="digIndividual">
+                        <iframe width="320" src="https://www.youtube.com/embed/6zIj3n9xTtI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="digIcon">
+                <img class="designImages" src="assets/digitalPeople.png" alt="blue icon of people connected via network">
+            </div>
+        </div>
+
 </div>
 
 </main>
 
 <footer class="centerAlign">
+    <br>
+    <br>
     <p style="margin:0;color:#54AEB0;">Melissa Rimsza</p>
     <p style="margin:0;color:#54AEB0;">mdrimsza@gmail.com</p>
     <p style="margin:0;color:#54AEB0;">(520)869-1979</p>

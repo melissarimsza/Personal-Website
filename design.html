@@ -10,6 +10,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<style>
+    .flip-container {
+        margin: 10px;
+        width: 400px;
+        height: 400px; 
+        perspective: 1000;
+        display: inline-block;
+    }
+    .flip-container:hover .card {
+        transform: rotateY(180deg);
+    }
+    .flip-container:active .card {
+        transform: rotateY(180deg);
+    }
+    .card, .front, .back {
+        width: 130px;
+        height: 195px;
+    }
+    .card {
+        transition: 0.5s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+    .front, .back {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        position: absolute;
+    }
+    .front {
+        z-index: 1;
+        transform: rotateY(180deg);
+        background: url("images/card-front.jpg") no-repeat;
+    }
+    .back {
+        z-index: 2; /* back side, placed above front */
+        transform: rotateY(0deg);
+        background: url("images/card-back.jpg") no-repeat;
+    }
+</style>
+
 <body>
     <nav class="navContainer">
         <div>
@@ -27,78 +67,141 @@
 
     <main>
 
-    <div class="designContainer">
+    <div class="mainContainer">
 
-        <div class="designIcon">
-            <h1  style="font-size:100px;color:#90E446;">Design</h1>
-        </div>
-
-        <div class="designIndividual">
-            <br>
-            <div  style="color:white;background-color:#90E446;margin: 0;">
-                <h2 style="margin:0">Dutch Bros Menu</h2>
-                <p>Created with Adobe Illustrator as practice for making trifold menus and matching branding.</p>
+        <div class="flip-container">
+            <div class="designIcon">
+                <h1  style="font-size:80px;color:#90E446;">Design</h1>
+                <p id="titleCaption">Flyers, posters, social meida graphics and shirts. Experience in all types of grpahic design!</p>
             </div>
-            <img class="designImages" src="assets/dutch-01.png" alt="Dutch Bros Coffee menu">
         </div>
 
-        <div class="designIndividual">
-            <br>
-            <div  style="color:white;background-color:#90E446;margin: 0;">
-                <h2 style="margin:0">Pool Party Flyer</h2>
-                <p>Created with Adobe Illustrator to promote a pool party event for Arizona State University.</p>
+        <div class="flip-container">
+            <div class="card">
+                <div class="front">
+                    <div class="designIndividual">
+                        <div>
+                            <h2 id="header" style="background-color: #90E446">Dutch Bros Menu</h2>
+                            <p id="caption">Created with Adobe Illustrator as practice for making trifold menus and matching branding.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="designIndividual">
+                        <img class="designImages" src="assets/dutch-01.png" alt="Dutch Bros Coffee menu">
+                    </div>
+                </div>
             </div>
-            <img class="designImages" src="assets/pool.png" alt="Pool party flyer">
         </div>
 
-        <div class="designIndividual">
-            <br>
-            <div  style="color:white;background-color:#90E446;margin: 0;">
-                <h2 style="margin:0">ASU Atheltic Shirt</h2>
-                <p>Created with Adobe Illustrator and Adobe Photoshop as giveaway merchandise for the ASU fitness center.</p>
+        <div class="flip-container">
+            <div class="card">
+                <div class="front">
+                    <div class="designIndividual">
+                        <div>
+                            <h2 id="header" style="background-color: #90E446">Pool Party Flyer</h2>
+                            <p id="caption">Created with Adobe Illustrator to promote a pool party event for Arizona State University.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="designIndividual">
+                        <img class="designImages" src="assets/pool.png" alt="Pool party flyer">
+                    </div>
+                </div>
             </div>
-            <img class="designImages" src="assets/shirts-01.png" alt="Sun Devil Fitness Center shirt front and back.">
         </div>
 
-        <div class="designIcon">
-            <img class="designImages" src="assets/designPen.png" alt="Green pen editing tool icon.">
-        </div>
-
-        <div class="designIndividual">
-            <br>
-            <div  style="color:white;background-color:#90E446;margin: 0;">
-                <h2 style="margin:0">Devils Adapt Shirt</h2>
-                <p>Created with Adobe Illustrator for the Arizona State University adaptive training program. </p>
+        <div class="flip-container">
+            <div class="card">
+                <div class="front">
+                    <div class="designIndividual">
+                        <div>
+                            <h2 id="header" style="background-color: #90E446">Arizona State University Athletic Shirt</h2>
+                            <p id="caption">Created with Adobe Illustrator and Adobe Photoshop as giveaway merchandise for the Arizona State University Fitness Center.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="designIndividual">
+                        <img class="designImages" src="assets/shirts-01.png" alt="Sun Devil Fitness Center shirt front and back.">
+                    </div>
+                </div>
             </div>
-            <img class="designImages" src="assets/DevilsAdaptShirts.png" alt="Devils Adapt shirt">
         </div>
 
-        <div class="designIndividual">
-            <br>
-            <div  style="color:white;background-color:#90E446;margin: 0;">
-                <h2 style="margin:0">Heels Dance Class Flyer</h2>
-                <p>Created with Adobe Illustrator to promote a limited time heals dance class at the ASU fitness center.</p>
+        <div class="flip-container">
+            <div class="designIcon">
+                <img class="designImages" src="assets/designPen.png" alt="Green pen editing tool icon.">
             </div>
-            <img class="designImages" src="assets/heels.png" alt="Heels dance class flyer">
         </div>
 
-        <div class="designIndividual">
-            <br>
-            <div  style="color:white;background-color:#90E446;margin: 0;">
-                <h2 style="margin:0">Healthy Fats Handout</h2>
-                <p>Created with Adobe Illustrator to inform ASU students on how they can include healthy fats in their diet.</p>
+        <div class="flip-container">
+            <div class="card">
+                <div class="front">
+                    <div class="designIndividual">
+                        <div>
+                            <h2 id="header" style="background-color: #90E446">Devils Adapt Shirt</h2>
+                            <p id="caption">Created with Adobe Illustrator for the Arizona State University adaptive training program.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="designIndividual">
+                        <img class="designImages" src="assets/DevilsAdaptShirts.png" alt="Devils Adapt shirt">
+                    </div>
+                </div>
             </div>
-            <img class="designImages" src="assets/fats.png" alt="Healthy fats flyer">
         </div>
 
-        <div class="designIcon">
-            <img class="designImages" src="assets/designCloud.png" alt="Green icon of a coule with art tools around it">
+        <div class="flip-container">
+            <div class="card">
+                <div class="front">
+                    <div class="designIndividual">
+                        <div>
+                            <h2 id="header" style="background-color: #90E446">Heels Dance Class Flyer</h2>
+                            <p id="caption">Created with Adobe Illustrator to promote a limited time heals dance class at the Arizona State University fitness center.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="designIndividual">
+                        <img class="designImages" src="assets/heels.png" alt="Heels dance class flyer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="card">
+                <div class="front">
+                    <div class="designIndividual">
+                        <div>
+                            <h2 id="header" style="background-color: #90E446">Healthy Fats Handout</h2>
+                            <p id="caption">Created with Adobe Illustrator to inform ASU students on how they can include healthy fats in their diet</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="designIndividual">
+                        <img class="designImages" src="assets/fats.png" alt="Healthy fats flyer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="designIcon">
+                <img class="designImages" src="assets/designCloud.png" alt="Green icon of a coule with art tools around it">
+            </div>
         </div>
     </div>    
 
     </main>
 
     <footer class="centerAlign">
+        <br>
+        <br>
         <p style="margin:0;color:#90E446;">Melissa Rimsza</p>
         <p style="margin:0;color:#90E446;">mdrimsza@gmail.com</p>
         <p style="margin:0;color:#90E446;">(520)869-1979</p>

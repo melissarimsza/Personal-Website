@@ -118,8 +118,33 @@ footer {
     background-color: #ff9eb9;
 }
 
+#header {
+    font-size: 30px;
+    border:0;
+    margin:0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+}
+
+#caption {
+    text-align: left;
+    font-size: 20px;
+    padding: 25px;
+    margin: 0px;
+    max-width: 380px;
+}
+
+#titleCaption {
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    margin: 0px;
+    max-width: 380px;
+}
+
 .designImages {
-    height: 280px;
+    height: 350px;
 }
 
 .designContainer {
@@ -130,16 +155,20 @@ footer {
 }
 
 .designIndividual {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
     border-style: solid;
     border-color: #90E446;
     border-radius: 30px;
     border-width: 10px;
-    margin: 10px;
-    width: 400px;
+    width: min(400px, 90vw);
     height: 400px;
     text-align: center;
     color:#90E446;
-    padding-left: 10px;
     margin-right:0;
     padding:0;
     background-color: #dbffbb;
@@ -147,44 +176,45 @@ footer {
 
 .designIcon {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-style: solid;
     border-color: #90E446;
     border-radius: 30px;
     border-width: 10px;
-    margin: 10px;
-    width: 400px;
+    width: min(400px, 90vw);
     height: 400px;
     text-align: center;
     color:#90E446;
-    padding-left: 10px;
-    margin-right:0;
-    padding:0;
     background-color: white;
 }
 
-.devContainer {
+.mainContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    row-gap: 20px;
 }
 
 .devIndividual {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
     border-style: solid;
     border-color: #F09247;
     border-radius: 30px;
     border-width: 10px;
-    margin: 10px;
-    width: 400px;
+    width: min(400px,90vw);
     height: 400px;
     text-align: center;
     color:#F09247;
-    padding-left: 10px;
-    margin-right:0;
     padding:0;
     background-color: #fdc08e;
+    text-align: center;
 }
 
 .devIcon {
@@ -196,13 +226,10 @@ footer {
     border-color: #F09247;
     border-radius: 30px;
     border-width: 10px;
-    margin: 10px;
-    width: 400px;
+    width: min(400px,90vw);
     height: 400px;
     text-align: center;
     color:#F09247;
-    padding-left: 10px;
-    margin-right:0;
     padding:0;
     background-color: white;
 }
@@ -212,20 +239,22 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    gap: 10px;
 }
 
 .digIndividual {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-style: solid;
     border-color: #54AEB0;
     border-radius: 30px;
     border-width: 10px;
-    margin: 10px;
-    width: 400px;
+    width: min(400px,90vw);
     height: 400px;
     text-align: center;
     color:#54AEB0;
-    padding-left: 10px;
-    margin-right:0;
     padding:0;
     background-color: #90d4d5;
 }
@@ -239,13 +268,11 @@ footer {
     border-color: #54AEB0;
     border-radius: 30px;
     border-width: 10px;
-    margin: 10px;
-    width: 400px;
+
+    width: min(400px,90vw);
     height: 400px;
     text-align: center;
     color:#54AEB0;
-    padding-left: 10px;
-    margin-right:0;
     padding:0;
     background-color: white;
 }

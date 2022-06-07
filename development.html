@@ -10,6 +10,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<style>
+    .flip-container {
+        margin: 10px;
+        width: 400px;
+        height: 400px; 
+        perspective: 1000;
+        display: inline-block;
+    }
+    .flip-container:hover .card {
+        transform: rotateY(180deg);
+    }
+    .flip-container:active .card {
+        transform: rotateY(180deg);
+    }
+    .card, .front, .back {
+        width: 130px;
+        height: 195px;
+    }
+    .card {
+        transition: 0.5s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+    .front, .back {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        position: absolute;
+    }
+    .front {
+        z-index: 1;
+        transform: rotateY(180deg);
+        background: url("images/card-front.jpg") no-repeat;
+    }
+    .back {
+        z-index: 2; /* back side, placed above front */
+        transform: rotateY(0deg);
+        background: url("images/card-back.jpg") no-repeat;
+    }
+</style>
+
 <body>
     <nav class="navContainer">
         <div>
@@ -27,71 +67,120 @@
 
     <main>
 
-    <div class="devContainer">
+    <div class="mainContainer">
 
-        <div class="devIcon">
-            <h1  style="font-size:60px;color:#F09247;">Development</h1>
-            <p>Confident in numeorus programming languages and multiple development cycles.</p>
-            <p>Click the images to view the code on GitHub!</p>
-        </div>
-
-        <div class="devIndividual">
-            <br>
-            <div  style="color:white;background-color:#F09247;margin: 0;">
-                <h2 style="border:0;margin:0;padding:0;color: white;">Edges2Kirby</h2>
-                <p style="max-width: 380px;">Edges2Kirby is a machine learning pased web project. It uses a custome model applied with tensorflow.js to color fill a user drawn kirby. Check out the project <a href="https://melissarimsza.github.io/Edges2Kirby/">HERE</a>!</p>
+        <div class="flip-container">
+            <div class="devIcon">
+                <h1  style="font-size:60px;color:#F09247;">Development</h1>
+                <p id="titleCaption">Confident in numeorus programming languages and multiple development cycles.</p>
+                <p id="titleCaption"> Check out my <a href="https://github.com/melissarimsza">Github</a> to view the code or try the projects yourself!
+                </p>
             </div>
-            <a href="https://github.com/melissarimsza/Edges2Kirby">
-                <img src="assets/kirby.png" alt="Edges2Kirby website"
-                width="320">
-            </a>
         </div>
 
-        <div class="devIndividual">
-            <br>
-            <div  style="color:white;background-color:#F09247;margin: 0;">
-                <h2 style="border:0;margin:0;padding:0;color: white;">2048</h2>
-                <p style="margin:0;max-width: 380px;"> 2048 is a desktop number-based puzzle game. Combine numbers on the game board to make matches and work your way up through powers of two. Win the game by combinging enough numbers to reach 2048!</p>
+        <div class="flip-container">
+            <div class="card">
+                <div class="front">
+                    <div class="devIndividual">
+                        <div>
+                            <h2 id="header" style="background-color:#F09247">Edges2Kirby</h2>
+                            <p id="caption">Edges2Kirby is a machine learning based web project. It uses a custom-made model applied with tensorflow.js to color fill a user drawn kirby.
+                            <p>
+                                <a href="https://melissarimsza.github.io/Edges2Kirby/">Try it yourself!</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="devIndividual">
+                        <a href="https://github.com/melissarimsza/Edges2Kirby">
+                            <img src="assets/kirby.png" alt="Edges2Kirby website"
+                            width="375">
+                        </a>
+                    </div>
+                </div>
             </div>
-            <br>
-            <a href="https://github.com/melissarimsza/Desktop-2048.git">
-                <img src="assets/2048.png"
-                width="310" alt="2048 desktop application">
-            </a>
         </div>
 
-        <div class="devIndividual">
-            <br>
-            <div  style="color:white;background-color:#F09247;margin: 0;">
-                <h2 style="border:0;margin:0;padding:0;">SDFC Wordle</h2>
-                <p style="max-width: 500px;">Based on the sensation Wordle (owned by the New York Times), SDFC Wordle is a custom version created for the Arizona State Sun Devil Fitness Center. It features health and wellness based words and ASU branding. Check out the project <a href="https://melissarimsza.github.io/SDFC_Wordle/">HERE</a>!</p>
+        <div class="flip-container">
+            <div class="card">
+                <div class="front">
+                    <div class="devIndividual">
+                        <div>
+                            <h2 id="header" style="background-color:#F09247">2048</h2>
+                            <p id="caption">2048 is a desktop number-based puzzle game. Combine numbers on the game board to make matches and work your way up through powers of two. Win the game by combinging enough numbers to reach 2048!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="devIndividual">
+                        <a href="https://github.com/melissarimsza/Desktop-2048.git">
+                            <img src="assets/2048.png"
+                            width="375" alt="2048 desktop application">
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a href="https://github.com/melissarimsza/SDFC_Wordle">
-                <img src="assets/wordle.png"
-                width="310" alt="SDFC Wordle landing page">
-            </a>
         </div>
 
-        <div class="devIndividual">
-            <br>
-            <div  style="color:white;background-color:#F09247;margin: 0;">
-                <h2 style="margin:0">Hotdog/Not Hotdog</h2>
-                <p>Based off of the app "Seefood" from the TV show Silicon Valley. This goofy app combines the power of the Apple MobileNetV2 image classifier with the ease and functionality of SwiftUI to create a hotdog identifying app.</p>
+        <div class="flip-container">
+            <div class="card">
+                <div class="front">
+                    <div class="devIndividual">
+                        <div>
+                            <h2 id="header" style="background-color:#F09247">Sun Devil Fitness Center Wordle</h2>
+                            <p id="caption">Based on the sensation Wordle (owned by the New York Times), SDFC Wordle is a custom version created for the Arizona State Sun Devil Fitness Center. It features health and wellness based words and ASU branding.</p>
+
+                            <p><a href="https://melissarimsza.github.io/SDFC_Wordle/">Try it yourself!</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="devIndividual">
+                        <a href="https://github.com/melissarimsza/SDFC_Wordle">
+                            <img src="assets/wordle.png"
+                            width="375" alt="SDFC Wordle landing page">
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a href="https://github.com/melissarimsza/Hotdog-notHotdog">
-                <img src="assets/hotdog.png"
-                width="310" alt="Two views from the Hotdog/Not Hotdog mobile application">
-            </a>
         </div>
 
-        <div class="devIcon">
-            <img class="designImages" src="assets/devComp.png" alt="Computer with HTML tag icon">
+        <div class="flip-container">
+            <div class="card">
+                <div class="front">
+                    <div class="devIndividual">
+                        <div>
+                            <h2 id="header" style="background-color:#F09247">Hotdog/Not Hotdog</h2>
+                            <p id="caption">Based off of the app "Seefood" from the TV show Silicon Valley. This goofy app combines the power of the Apple MobileNetV2 image classifier with the ease and functionality of SwiftUI to create a hotdog identifying app.</p>
+
+                            <p><a href="https://melissarimsza.github.io/SDFC_Wordle/">Try it yourself!</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="devIndividual">
+                        <a href="https://github.com/melissarimsza/Hotdog-notHotdog">
+                            <img src="assets/hotdog.png"
+                            width="375" alt="Two views from the Hotdog/Not Hotdog mobile application">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="devIcon">
+                <img class="designImages" src="assets/devComp.png" alt="Computer with HTML tag icon">
+            </div>
         </div>
 </div>
 
 </main>
 
 <footer class="centerAlign">
+    <br>
+    <br>
     <p style="margin:0;color:#F09247;">Melissa Rimsza</p>
     <p style="margin:0;color:#F09247;">mdrimsza@gmail.com</p>
     <p style="margin:0;color:#F09247;">(520)869-1979</p>

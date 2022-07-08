@@ -307,7 +307,8 @@ a {
 }
 
 .aboutHeader {
-    color: #CC7178
+    color: #CC7178;
+    width: 100%;
 }
 
 .aboutIndividual {
@@ -317,7 +318,7 @@ a {
     background-color: #ffd9da;
     border-width: 10px;
     margin: 10px;
-    width: 100%;
+    width: 95%;
 
     color: #6e0d25;
     padding-left: 10px;

@@ -1,6 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
+    background-color: #F3E1DD;
 }
 
 nav a {
@@ -13,7 +13,7 @@ nav a {
 }
 
 nav {
-    background-color: #D6406B;
+    background-color: #7daf9c;
     padding: 8px;
 }
 
@@ -40,30 +40,33 @@ form {
 
 table {
     width:100%;
-    border: 2px solid #D6406B;
+    border: 2px solid #c7d9b7;
     border-collapse: collapse;
     border-radius: 10px;
 }
 
 tr:nth-of-type(odd) {
     background-color: #F5FAFC;
-    color: #D6406B;
+    color: #7daf9c;
 }
 
 td {
     padding: 0.5em;
-    border: 2px solid #D6406B;
+    border: 2px solid #c7d9b7;
     text-align: center;
 }
 
 th {
     padding: 0.5em;
-    border: 2px solid #D6406B;
+    border: 2px solid #c7d9b7;
 }
 
 footer {
     font-style: italic;
     font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #CC7178;
 }
 
 
@@ -133,14 +136,16 @@ footer {
     padding: 25px;
     margin: 0px;
     max-width: 380px;
+    color: #7daf9c;
 }
 
 #titleCaption {
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    padding: 10px;
     margin: 0px;
-    max-width: 380px;
+    max-width: 2000px;
+    color: #cc7178;
 }
 
 .designImages {
@@ -162,16 +167,16 @@ footer {
 
 
     border-style: solid;
-    border-color: #90E446;
-    border-radius: 30px;
+    border-color: #7daf9c;
+    border-radius: 10px;
     border-width: 10px;
     width: min(400px, 90vw);
     height: 400px;
     text-align: center;
-    color:#90E446;
+    color:#C7D9B7;
     margin-right:0;
     padding:0;
-    background-color: #dbffbb;
+    background-color: #C7D9B7;
 }
 
 .designIcon {
@@ -181,13 +186,18 @@ footer {
     align-items: center;
     border-style: solid;
     border-color: #90E446;
-    border-radius: 30px;
+    border-radius: 10px;
     border-width: 10px;
     width: min(400px, 90vw);
     height: 400px;
     text-align: center;
     color:#90E446;
     background-color: white;
+}
+
+.designHeader {
+    text-align: center;
+    width: 100%;
 }
 
 .mainContainer {
@@ -205,15 +215,15 @@ footer {
     align-items: center;
     border-style: solid;
     border-style: solid;
-    border-color: #F09247;
-    border-radius: 30px;
+    border-color: #7daf9c;
+    border-radius: 10px;
     border-width: 10px;
     width: min(400px,90vw);
     height: 400px;
     text-align: center;
     color:#F09247;
     padding:0;
-    background-color: #fdc08e;
+    background-color: #C7D9B7;
     text-align: center;
 }
 
@@ -248,15 +258,15 @@ footer {
     justify-content: center;
     align-items: center;
     border-style: solid;
-    border-color: #54AEB0;
-    border-radius: 30px;
+    border-color: #7daf9c;
+    border-radius: 10px;
     border-width: 10px;
     width: min(400px,90vw);
     height: 400px;
     text-align: center;
     color:#54AEB0;
     padding:0;
-    background-color: #90d4d5;
+    background-color: #C7D9B7;
 }
 
 .digIcon {
@@ -283,7 +293,7 @@ footer {
     padding-right: 10%;
 }
 
-.aboutContainer {
+.Container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -293,22 +303,19 @@ footer {
 }
 
 .aboutHeader {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    color: #CC7178
 }
 
 .aboutIndividual {
     border-style: solid;
-    border-radius: 30px;
-    border-color: #D6406B;
+    border-radius: 10px;
+    border-color: #cc7178;
+    background-color: #ffd9da;
     border-width: 10px;
     margin: 10px;
     width: 100%;
 
-    color:#D6406B;
+    color: #6e0d25;
     padding-left: 10px;
 }
 
@@ -367,8 +374,8 @@ footer {
 }
 
 .contactContainer {
-    background-color:#ff9eb9;
-    color:white;
+    background-color:#7daf9c;
+    color: whitesmoke;
     border-radius: 10px;
     width: 60%;
     padding: 10px;

@@ -69,6 +69,10 @@ footer {
     color: #CC7178;
 }
 
+a {
+    color: white;
+}
+
 
 #designHead {
     color: #A1E753;
@@ -348,19 +352,6 @@ footer {
     min-width: 400px;
 }
 
-.blog {
-    background-color:#ff9eb9;
-    color:white;
-    border-radius: 10px;
-    max-width: 800px;
-}
-
-.blogContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .imageContainer {
     display: flex;
     flex-direction: column;
@@ -373,12 +364,38 @@ footer {
     display: flex;
 }
 
-.contactContainer {
-    background-color:#7daf9c;
-    color: whitesmoke;
+.contactBackground {
+    background-color:#C7D9B7;
+    color: #7daf9c;
     border-radius: 10px;
-    width: 60%;
+    width: 40%;
+    height: 550px;
     padding: 10px;
+    text-align: center;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #7daf9c;
+
+}
+
+.contactImages {
+    height:200px;
+}
+
+.contactIconContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contactContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .navRight {
@@ -416,6 +433,14 @@ footer {
         border-width: 0;
         border-top-width: 3px;
         width:500px;
+    }
+
+    .contactBackground {
+        width: 95%;
+    }
+
+    .contactIconContainer {
+        flex-direction: column;
     }
 }
 

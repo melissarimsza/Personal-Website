@@ -10,46 +10,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<style>
-    .flip-container {
-        margin: 10px;
-        width: 400px;
-        height: 400px; 
-        perspective: 1000;
-        display: inline-block;
-    }
-    .flip-container:hover .card {
-        transform: rotateY(180deg);
-    }
-    .flip-container:active .card {
-        transform: rotateY(180deg);
-    }
-    .card, .front, .back {
-        width: 130px;
-        height: 195px;
-    }
-    .card {
-        transition: 0.5s;
-        transform-style: preserve-3d;
-        position: relative;
-    }
-    .front, .back {
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        position: absolute;
-    }
-    .front {
-        z-index: 1;
-        transform: rotateY(180deg);
-        background: url("images/card-front.jpg") no-repeat;
-    }
-    .back {
-        z-index: 2; /* back side, placed above front */
-        transform: rotateY(0deg);
-        background: url("images/card-back.jpg") no-repeat;
-    }
-</style>
-
 <body>
     <nav class="navContainer">
         <div>
@@ -74,7 +34,7 @@
     <div class="mainContainer">
 
         <div class="designIndividual">
-            <img class="designImages" src="assets/meEdit.png" alt="Pool party flyer">
+            <img class="designImages" src="assets/nyc-01.png" alt="New York City Edit">
         </div>
 
         <div class="designIndividual">
@@ -82,11 +42,7 @@
         </div>
 
         <div class="designIndividual">
-            <img class="designImages" src="assets/dutch-01.png" alt="Pool party flyer">
-        </div>
-
-        <div class="designIndividual">
-            <img class="designImages" src="assets/shirts-01.png" alt="Pool party flyer">
+            <img class="designImages" src="assets/glassAnimals.png" alt="Swimming">
         </div>
 
         <div class="designIndividual">
@@ -94,8 +50,25 @@
         </div>
 
         <div class="designIndividual">
-            <img class="designImages" src="assets/nyc-01.png" alt="Pool party flyer">
+            <img class="designImages" src="assets/meEdit.png" alt="Disco edit">
         </div>
+
+        <div class="designIndividual">
+            <img class="designImages" src="assets/takeTheEdgeOff.png" alt="Take the edge iff">
+        </div>
+
+        <div class="designIndividual">
+            <img class="designImages" src="assets/swimming.png" alt="Swimming">
+        </div>
+
+        <div class="designIndividual">
+            <img class="designImages" src="assets/shirts-01.png" alt="sdfc t shirt">
+        </div>
+
+        <div class="designIndividual">
+            <iframe src="https://drive.google.com/file/d/1ZJmweSt7ghEicUwB-NPl2h56aaySRhop/preview" width="320" height="240" allow="autoplay"></iframe>
+        </div>
+    
 
         <!-- <div class="flip-container">
             <div class="card">

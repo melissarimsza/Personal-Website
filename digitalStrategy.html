@@ -10,46 +10,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<style>
-    .flip-container {
-        margin: 10px;
-        width: 400px;
-        height: 400px; 
-        perspective: 1000;
-        display: inline-block;
-    }
-    .flip-container:hover .card {
-        transform: rotateY(180deg);
-    }
-    .flip-container:active .card {
-        transform: rotateY(180deg);
-    }
-    .card, .front, .back {
-        width: 130px;
-        height: 195px;
-    }
-    .card {
-        transition: 0.5s;
-        transform-style: preserve-3d;
-        position: relative;
-    }
-    .front, .back {
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        position: absolute;
-    }
-    .front {
-        z-index: 1;
-        transform: rotateY(180deg);
-        background: url("images/card-front.jpg") no-repeat;
-    }
-    .back {
-        z-index: 2; /* back side, placed above front */
-        transform: rotateY(0deg);
-        background: url("images/card-back.jpg") no-repeat;
-    }
-</style>
-
 <body>
     <nav class="navContainer">
         <div>
@@ -60,7 +20,7 @@
             <a href = "about2.html">Resume</a>
             <a href = "design.html">Design</a>
             <a href = "development.html"> Development</a>
-            <a href = "digitalStrategy.html">Digital Marketing</a>
+            <a href = "digitalStrategy.html">Marketing</a>
             <a href = "contact.html">Contact</a>
         </div>
     </nav>
@@ -68,7 +28,7 @@
     <main>
 
         <div class="centerAlign">
-            <img style="max-width:60%;" src="assets/digHeader-11.png" alt="Digital marketing header">
+            <img style="max-width:90%;" src="assets/marketingBanner-10.png" alt="Digital marketing header">
             <p id="titleCaption">My professional and educational experience in digital marketing has taught me a few important things: know your audience, know your brand standard, and know yourself. With these three fundamentals, you can make fun, inspiring, and most importantly, effective marketing. </p>
         </div>
 
@@ -76,104 +36,91 @@
 
     <div class="mainContainer">
 
-
-        <div class="designIndividual">
-            <img class="designImages" src="assets/dutch-01.png" alt="dutch bros flyer">
-        </div>
-
-        <div class="digIndividual">
-            <iframe src="https://drive.google.com/file/d/1p-GFtspXfuJExsSXBiuy7Flw6_fq6H9y/preview" width="320" allow="autoplay"></iframe>
-        </div>
-
-        <div class="digIndividual">
-            <img class="designImages" src="assets/heels.png" alt="Heels dance class flyer">
-        </div>
-
-        <div class="digIndividual">
-            <iframe class="embededDig" src="https://docs.google.com/presentation/d/e/2PACX-1vRAsEB3kZ7KmgHS4royHUHinvBLa1D-VAOek9LBhly0kygXuM3ZqhFEpLdnK6g9ChX6aROpjjMVEu2j/embed?start=false&loop=false&delayms=5000" frameborder="0" width="300" height="210" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-        </div>
-
-        <div class="digIndividual">
-            <img class="designImages" src="assets/sexplained.png" alt="Heels dance class flyer">
-        </div>
-
-        <div class="digIndividual">
-            <img class="designImages" src="assets/poolSports.png" alt="Heels dance class flyer">
-        </div>
-
-
-        <!-- <div class="flip-container">
-            <div class="card">
-                <div class="front">
-                    <div class="digIndividual">
-                        <div>
-                            <h2 id="header" style="background-color: #7daf9c;">Quantum Computing Teaser Video</h2>
-                            <p id="caption">Video created to build hype for the launch of a new quantum computing technology. Graphics made with Adobe After Effects.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="back">
-                    <div class="digIndividual">
-                        <iframe src="https://drive.google.com/file/d/1p-GFtspXfuJExsSXBiuy7Flw6_fq6H9y/preview" width="320" allow="autoplay"></iframe>
-                    </div>
-                </div>
+        <div>
+            <div class="marketingIndividualHead">
+                <h2 id="header" style="background-color: #7daf9c;color:white">Sun Devil Fitness Center @ Arizona State University</h2>
             </div>
+
+            <br>
+            
+            <div class="marketingIndividual">
+                <div style="width: 550px;">
+                    <h3>As the Marketing Coordinator for the Arizona State University Fitness center I manage a team of 15 students to promote and maintain and the LiveWell brand and culture on campus. Some of my responsibilites include:</h3>
+                    <ul>
+                        <li>Meeting with clients to create detailed marketing plans for events and campaigns on campus</li>
+                        <li>Designing flyers and Insstagram graphics</li>
+                        <li>Creating branding guidelines for team members to follow</li>
+                        <li>Overseeing the production of YouTube videos and Instagram Reels</li>
+                        <li>Creating and maintaing a system to facilitate organziation and communication within the department</li>
+                        <li>Creating and installing bulletin boards and displays</li>
+                        <li>Being on call for last minute marketing and graphic design support</li>
+                        <li>Working on campus events and booths</li>
+    
+                    </ul>
+                </div>
+    
+                <h3>Marketing Meeting Checklist</h3>
+                <img  width="300px" src="assets/meetingCheclist.png" alt="marketing meeting checklist">
+    
+                <br>
+
+                <h3>Healthy Living Design Guidelines and Example Flyer</h3>
+                <img class="marketingImages" src="assets/HWEPcombo-11.png" alt="sdfc marketing materials">
+    
+                <h3>Sun Devil Fitness Giveaway T-shirt</h3>
+                <img class="marketingImages" src="assets/shirts-01.png" alt="sdfc t shirt">
+    
+                <h3>Event Promotion Flyers</h3>
+                <img class="marketingImages" src="assets/marketingCombo-11.png" alt="sdfc marketing materials">
+            </div>
+
+        
         </div>
 
-        <div class="flip-container">
-            <div class="card">
-                <div class="front">
-                    <div class="digIndividual">
-                        <div>
-                            <h2 id="header" style="background-color: #7daf9c;">Instagram Strategy</h2>
-                            <p id="caption"> This presentation uses core marketing techniques to create an Instagram marketing plan for the comapny Bath and Body Works.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="back">
-                    <div class="digIndividual">
-                        <iframe class="embededDig" src="https://docs.google.com/presentation/d/e/2PACX-1vRAsEB3kZ7KmgHS4royHUHinvBLa1D-VAOek9LBhly0kygXuM3ZqhFEpLdnK6g9ChX6aROpjjMVEu2j/embed?start=false&loop=false&delayms=5000" frameborder="0" width="300" height="210" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-                    </div>
-                </div>
+        <div>
+
+            <div class="marketingIndividualHead">
+                <h2 id="header" style="background-color: #7daf9c;color:white">Quantum Computing Solutions @ Keysight Technology</h2>
             </div>
+
+            <br>
+
+            <div class="marketingIndividual">
+                <div style="width: 550px;">
+                    <h3>As a marketing intern for the Quantum Comuting department at Keysight Technologies I had a variety of responsibilites including:</h3>
+    
+                    <ul>
+                        <li>Developing a complete YouTube Launch and campaign to promote products</li>
+                        <li>Creating over 20 YouTube editable thumbnail templates for future use</li>
+                        <li>Designing both physical and digital flyers to promote product launches</li>
+                        <li>Animating intros and outros for webinars and videos</li>
+                        <li>Editing and adding captions to webinars and videos</li>
+                        <li>Translating scientific concepts into easily understandable graphics</li>
+                        <li>Designing booths for scientific conferences</li>
+                        <li>Creating a repository of resources of editable graphics and content for future marketing teams</li>
+                    </ul>
+                </div>
+    
+                <h3>Youtube Banner and Thumbnails</h3>
+                <img class="marketingImages" src="assets/keysightStuffl-11.png" alt="Keysight thumbnails and banner">
+    
+                <br>
+    
+                <h3>Product Launch Teaser Trailer</h3>
+                <iframe src="https://drive.google.com/file/d/1tQl2wIWDvx8bUTpyJrov4aciOXdGj6E5/preview" width="480" height="299" allow="autoplay"></iframe>
+    
+                <br> 
+    
+                <h3>YouTube Channel Strategy</h3>
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTK3R841lrNcfbHy8iok50XQRYw5yaNlo5UxS-MhT-A3_FN0WpYaQdw7vScKENxOV77RLC7T6eXsrIi/embed?start=true&loop=true&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    
+                <br>
+    
+                <h3>Conference Banners</h3>
+                <img class="marketingImages" src="assets/keysightStuffl-12.png" alt="Keysight thumbnails and banner">
+            </div>
+
         </div>
-
-        <div class="flip-container">
-            <div class="card">
-                <div class="front">
-                    <div class="digIndividual">
-                        <div>
-                            <h2 id="header" style="background-color: #7daf9c;">Heels Dance Class</h2>
-                            <p id="caption">Created with Adobe Illustrator to promote a limited time heals dance class at the Arizona State University fitness center.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="back">
-                    <div class="digIndividual">
-                        <img class="designImages" src="assets/heels.png" alt="Heels dance class flyer">
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
-        <!-- <div class="flip-container">
-            <div class="card">
-                <div class="front">
-                    <div class="digIndividual">
-                        <div>
-                            <h2 id="header" style="background-color: #7daf9c;">"Weirdo" Music Video</h2>
-                            <p id="caption">Written, directed, and edited by Melissa Rimsza. Muisc by Way Too Andrew.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="back">
-                    <div class="digIndividual">
-                        <iframe width="320" src="https://www.youtube.com/embed/6zIj3n9xTtI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div> -->
 
 </div>
 

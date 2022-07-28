@@ -19,6 +19,7 @@ nav {
 
 li {
     font-size: 18px;
+    text-align: left;
 }
 
 h1 {
@@ -290,6 +291,46 @@ a {
     color:#54AEB0;
     padding:0;
     background-color: white;
+}
+
+.marketingIndividual {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-style: solid;
+    border-color: #7daf9c;
+    border-radius: 10px;
+    border-width: 10px;
+    width: min(600px,90vw);
+    height: 2300px;
+    color:#7daf9c;
+    padding:0;
+    background-color: #C7D9B7;
+    text-align: center;
+}
+
+.marketingIndividualHead {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-style: solid;
+    border-color: #7daf9c;
+    border-radius: 10px;
+    border-width: 10px;
+    width: min(600px,90vw);
+    height: 100px;
+    padding:0;
+    background-color: #7daf9c;
+    color:white;
+    text-align: center;
+}
+
+.marketingImages {
+    width: 450px;
 }
 
 
